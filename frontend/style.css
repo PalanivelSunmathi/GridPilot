@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+/* ================= NAVBAR ================= */
+
+.grid-navbar {
+    background: #102a43;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 1.35rem;
+}
+
+.navbar-brand i {
+    margin-right: 6px;
+}
+
+.nav-link {
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #7dd3fc !important;
+}
+
+/* ================= HERO ================= */
+
+.hero-section {
+    background: linear-gradient(135deg, #0f766e, #155e75);
+    padding: 75px 0;
+    color: white;
+}
+
+.project-badge {
+    background: rgba(255, 255, 255, 0.18);
+    padding: 9px 15px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero-title span {
+    color: #fef08a;
+}
+
+.hero-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 650px;
+    color: #e0f2fe;
+}
+
+.dashboard-btn {
+    margin-top: 15px;
+    padding: 12px 22px;
+    border: none;
+    background: #facc15;
+    color: #172554;
+    font-weight: 700;
+}
+
+.dashboard-btn:hover {
+    background: #fde047;
+    color: #172554;
+}
+
+.power-icon-box {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    padding: 45px 25px;
+    backdrop-filter: blur(10px);
+}
+
+.power-icon-box i {
+    font-size: 5rem;
+    color: #fef08a;
+}
+
+.power-icon-box h4 {
+    margin-top: 15px;
+}
+
+.status-online {
+    color: #bbf7d0;
+    font-weight: 600;
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard-section {
+    padding: 70px 0;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading span,
+.mini-title {
+    color: #0f766e;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+.section-heading p {
+    color: #64748b;
+}
+
+/* ================= STAT CARDS ================= */
+
+.stat-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ccfbf1;
+    color: #0f766e;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    margin-bottom: 18px;
+}
+
+.stat-card p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.stat-card h3 small {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.card-status {
+    color: #15803d;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* ================= CONTENT CARD ================= */
+
+.content-card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.content-card h3 {
+    margin-top: 8px;
+    font-weight: 800;
+}
+
+/* ================= TABLE ================= */
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    color: #64748b;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.table tbody td {
+    padding: 18px 10px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table td i {
+    color: #0f766e;
+    margin-right: 8px;
+}
+
+.device-online {
+    color: #15803d;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.device-warning {
+    color: #ca8a04;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* ================= ALERTS ================= */
+
+.alert-item {
+    display: flex;
+    gap: 15px;
+    padding: 18px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.alert-item:last-child {
+    border-bottom: none;
+}
+
+.alert-item i {
+    color: #dc2626;
+    font-size: 1.3rem;
+}
+
+.alert-item strong {
+    font-size: 0.95rem;
+}
+
+.alert-item p {
+    margin: 4px 0 0;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+/* ================= SYSTEM HEALTH ================= */
+
+.health-item {
+    margin-top: 25px;
+}
+
+.health-item span {
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.health-item strong {
+    color: #0f766e;
+}
+
+.progress {
+    height: 9px;
+    margin-top: 8px;
+    background: #e2e8f0;
+}
+
+.progress-bar {
+    background: #0f766e;
+}
+
+/* ================= REPORTS ================= */
+
+.report-value {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f766e;
+}
+
+.report-value + p {
+    color: #64748b;
+    margin-top: 5px;
+}
+
+/* ================= FOOTER ================= */
+
+.grid-footer {
+    background: #102a43;
+    color: #dbeafe;
+    padding: 35px 0;
+}
+
+.grid-footer i {
+    color: #fef08a;
+    margin-right: 5px;
+}
+
+.grid-footer p {
+    margin: 10px 0;
+    color: #bfdbfe;
+}
+
+.grid-footer small {
+    color: #94a3b8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-section {
+        padding: 55px 0;
+    }
+
+    .power-icon-box {
+        margin-top: 35px;
+    }
+
+    .dashboard-section {
+        padding: 50px 0;
+    }
+
+    .content-card {
+        padding: 20px;
+    }
+}
+
