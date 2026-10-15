@@ -1,78 +1,99 @@
-\# GridPilot – Testing Report
 
+# GridPilot – Testing Report
 
+## 1. Project Overview
 
-\## 1. Project Overview
+GridPilot is a web-based Smart Power Grid Monitoring and Management System developed using HTML, CSS, JavaScript, Bootstrap, Java, Spring Boot, and MySQL.
 
-GridPilot is a Smart Power Grid Monitoring and Management System developed using Java, Spring Boot, MySQL, HTML, CSS, JavaScript, and Bootstrap.
+The system displays electrical parameters such as voltage, current, frequency, and calculated power. It provides REST API endpoints for retrieving and saving readings and stores historical records in a MySQL database.
 
+## 2. Testing Objectives
 
+- Verify frontend dashboard data display.
+- Verify communication between the frontend and backend API.
+- Verify Spring Boot backend connectivity.
+- Verify MySQL database connectivity and data persistence.
+- Test voltage-based status classification.
+- Verify saved reading history.
+- Check the main API endpoints.
 
-\## 2. Testing Objectives
+## 3. Test Cases
 
-\- Verify backend API connectivity.
+| Test ID | Test Input | Expected Status | Purpose |
+|---|---|---|---|
+| TC-01 | 230 V, 10 A, 50 Hz | NORMAL | Verify normal voltage classification |
+| TC-02 | 245 V, 15 A, 50 Hz | WARNING | Verify warning voltage classification |
+| TC-03 | 260 V, 50 A, 10 Hz | CRITICAL | Verify critical voltage classification |
 
-\- Verify dashboard data display.
+Note: The current backend classifies status based on voltage thresholds only. Current and frequency are recorded and displayed but are not used in the current status calculation.
 
-\- Verify MySQL database connectivity.
+## 4. Functional Verification
 
-\- Test demo voltage status classification.
+### 4.1 Frontend Dashboard
 
-\- Verify reading history.
+- The dashboard was opened using the local development server.
+- Voltage, current, and calculated power values were displayed.
+- The dashboard retrieved readings from the backend API.
+- The dashboard refreshes periodically.
 
+### 4.2 Backend API
 
+- The backend application started successfully.
+- The `/api/status` endpoint was used to check backend availability.
+- The `/api/grid-data` endpoint returned grid reading data.
+- The `/api/grid-data/save` endpoint accepted and saved a reading.
+- The `/api/grid-data/history` endpoint returned saved readings.
 
-\## 3. Test Cases
+### 4.3 Database Verification
 
+- The backend connected to MySQL successfully.
+- Grid readings were saved to the database.
+- The reading history endpoint returned stored records.
+- Multiple saved records were observed during testing.
 
+### 4.4 Version Control Verification
 
-| Test ID | Input | Expected Status |
+- Backend source files were committed and pushed to GitHub.
+- The project source code is maintained in the GridPilot repository.
+- Project documentation is maintained in Markdown format.
 
-|---|---|---|
+## 5. Technology Stack
 
-| TC-01 | 230 V, 10 A, 50 Hz | NORMAL |
+- Frontend: HTML, CSS, JavaScript, Bootstrap
+- Backend: Java, Spring Boot
+- Database: MySQL
+- API: REST API
+- Build Tool: Maven
+- Development Tools: Visual Studio Code, MySQL Workbench
+- Version Control: Git and GitHub
 
-| TC-02 | 235 V, 15 A, 50 Hz | WARNING |
+## 6. Limitations
 
-| TC-03 | 260 V, 50 A, 10 Hz | CRITICAL |
+- The current dashboard uses simulated demonstration readings.
+- Physical electrical sensors have not yet been integrated.
+- Status classification is based on voltage thresholds only.
+- Current and frequency are not included in the current status calculation.
+- Threshold values are used for software demonstration and testing only.
+- The application is not a certified electrical protection or grid-control system.
 
+## 7. Future Enhancements
 
+- Integrate suitable physical voltage and current sensors.
+- Add real-time electrical data acquisition.
+- Display historical readings using charts.
+- Add automated API and integration tests.
+- Implement user authentication and access control.
+- Add configurable alerts and notifications.
+- Explore cloud deployment and remote monitoring.
 
-\## 4. Verification
+## 8. Conclusion
 
-\- Backend API response was checked.
+The GridPilot software demonstration displays simulated electrical readings through a web dashboard, communicates with a Spring Boot REST API, and stores and retrieves reading history using MySQL.
 
-\- Voltage, current, and frequency were displayed on the dashboard.
+The current implementation demonstrates the basic software architecture for grid monitoring. Physical sensor integration and further testing are required before it can be considered a real-time electrical monitoring system.
 
-\- Different test readings were entered.
+## Author
 
+Sunmathi P.
 
-
-\## 5. Technology Stack
-
-\- Frontend: HTML, CSS, JavaScript, Bootstrap
-
-\- Backend: Java, Spring Boot
-
-\- Database: MySQL
-
-\- Build Tool: Maven
-
-
-
-\## 6. Limitation
-
-The readings and status thresholds are used for demonstration. Real electrical sensor integration has not yet been confirmed.
-
-
-
-\## 7. Future Enhancements
-
-\- Real-time sensor integration
-
-\- Improved automated API testing
-
-\- User authentication
-
-\- Cloud deployment
-
+GitHub: https://github.com/PalanivelSunmathi/GridPilot
